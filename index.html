@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Donut SMP Stashes</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+```
+<header class="header">
+    <h1>DONUT SMP STASHES</h1>
+    <div class="subtitle">By Maz24</div>
+</header>
+
+
+<!-- STASH 1 -->
+
+<section class="stash-title">
+    <h2><strong>Amethyst</strong> Deepslate Stash</h2>
+        <p>
+            <span class="price">Price: 150m</span><br>
+            This Stash has a full regear station with plenty of chests to put gear in.
+            It has a full game spot where you can play arrow paper game, etc.
+        </p>
+
+        <div class="disclaimer">
+            ⚠️ ARMOR AND LOOT WILL NOT BE PROVIDED
+        </div>
+</section>
+
+
+<div class="gallery">
+
+    <div class="photo" onclick="openViewer('1.png')">
+        <div class="number">#1</div>
+        <img src="1.png">
+    </div>
+
+    <div class="photo" onclick="openViewer('2.png')">
+        <div class="number">#2</div>
+        <img src="2.png">
+    </div>
+
+    <div class="photo" onclick="openViewer('3.png')">
+        <div class="number">#3</div>
+        <img src="3.png">
+    </div>
+
+    <div class="photo" onclick="openViewer('4.png')">
+        <div class="number">#4</div>
+        <img src="4.png">
+    </div>
+
+    <div class="photo" onclick="openViewer('5.png')">
+        <div class="number">#5</div>
+        <img src="5.png">
+    </div>
+
+    <div class="photo" onclick="openViewer('6.png')">
+        <div class="number">#6</div>
+        <img src="6.png">
+    </div>
+
+    <div class="photo" onclick="openViewer('7.png')">
+        <div class="number">#7</div>
+        <img src="7.png">
+    </div>
+
+</div>
+
+
+<!-- COMING SOON -->
+
+<section class="coming-soon">
+
+    <h2>MORE STASHES COMING SOON</h2>
+
+    <div class="coming-card">
+        <span>+</span>
+        <p>New stashs will be added here.</p>
+    </div>
+
+</section>
+
+
+
+<!-- FULLSCREEN IMAGE VIEWER -->
+
+<div class="viewer" id="viewer">
+
+    <button class="viewer-arrow left" onclick="previousImage()">‹</button>
+
+    <img id="viewerImage" src="" onclick="event.stopPropagation()">
+
+    <button class="viewer-arrow right" onclick="nextImage()">›</button>
+
+    <div class="close" onclick="closeViewer()">×</div>
+
+</div>
+
+
+<script src="script.js"></script>
+```
+
+</body>
+</html>

@@ -1,0 +1,351 @@
+* {
+  box-sizing: border-box;
+  }
+
+body {
+margin: 0;
+min-height: 100vh;
+font-family: Arial, sans-serif;
+color: white;
+overflow-x: auto;
+
+background:
+radial-gradient(
+circle at 50% -20%,
+rgba(90, 120, 210, 0.35),
+transparent 45%
+),
+radial-gradient(
+circle at 10% 80%,
+rgba(50, 80, 160, 0.18),
+transparent 35%
+),
+radial-gradient(
+circle at 90% 60%,
+rgba(80, 60, 160, 0.15),
+transparent 35%
+),
+linear-gradient(
+135deg,
+rgb(7, 13, 30),
+rgb(12, 24, 55),
+rgb(18, 31, 68)
+);
+
+background-attachment: fixed;
+}
+
+
+.header {
+text-align: center;
+padding: 35px 20px 25px;
+background: rgba(20, 20, 20, 0.92);
+border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+margin: 0;
+font-size: 45px;
+letter-spacing: 3px;
+color: rgb(220, 220, 220);
+text-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+}
+
+.subtitle {
+display: inline-block;
+margin-top: 15px;
+padding: 8px 22px;
+background: rgba(255, 255, 255, 0.08);
+border: 1px solid rgba(255, 255, 255, 0.18);
+border-radius: 20px;
+color: rgb(190, 190, 190);
+font-size: 14px;
+font-weight: bold;
+letter-spacing: 2px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+backdrop-filter: blur(6px);
+transition: 0.25s ease;
+}
+
+.subtitle:hover {
+transform: translateY(-3px) scale(1.03);
+border-color: rgba(255, 255, 255, 0.35);
+color: white;
+box-shadow: 0 7px 22px rgba(0, 0, 0, 0.5);
+}
+
+.stash-title {
+text-align: center;
+margin: 45px auto 20px;
+max-width: 900px;
+}
+
+.stash-title h2 {
+margin: 0;
+font-size: 30px;
+color: rgb(225, 225, 225);
+transition: 0.25s ease;
+}
+
+.stash-title h2:hover {
+color: white;
+transform: scale(1.03);
+text-shadow: 0 0 15px rgba(255, 255, 255, 0.18);
+}
+
+.stash-title p {
+max-width: 750px;
+margin: 15px auto 0;
+padding: 15px 25px;
+background: rgba(20, 20, 20, 0.55);
+border: 1px solid rgba(255, 255, 255, 0.08);
+border-radius: 12px;
+color: rgb(165, 165, 165);
+line-height: 1.6;
+box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+transition: 0.25s ease;
+}
+
+.stash-title p:hover {
+transform: translateY(-3px);
+background: rgba(30, 30, 30, 0.7);
+border-color: rgba(255, 255, 255, 0.2);
+color: rgb(190, 190, 190);
+box-shadow: 0 9px 25px rgba(0, 0, 0, 0.4);
+}
+
+.price {
+color: rgb(80, 220, 100);
+font-weight: bold;
+}
+
+.disclaimer {
+display: inline-block;
+margin-top: 15px;
+padding: 10px 18px;
+background: rgba(120, 60, 30, 0.35);
+border: 1px solid rgba(255, 150, 80, 0.4);
+border-radius: 10px;
+color: rgb(255, 170, 100);
+font-weight: bold;
+font-size: 14px;
+transition: 0.25s ease;
+}
+
+.disclaimer:hover {
+transform: translateY(-3px) scale(1.02);
+background: rgba(140, 70, 35, 0.5);
+border-color: rgba(255, 170, 100, 0.65);
+color: rgb(255, 190, 130);
+box-shadow: 0 7px 20px rgba(0, 0, 0, 0.35);
+}
+
+.gallery {
+display: flex;
+justify-content: center;
+gap: 18px;
+width: max-content;
+margin: 0 auto;
+padding: 20px 30px 40px;
+}
+
+.photo {
+position: relative;
+width: 170px;
+padding: 8px;
+background: linear-gradient(145deg, rgb(55, 55, 55), rgb(25, 25, 25));
+border-radius: 16px;
+border: 1px solid rgba(255, 255, 255, 0.08);
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+transition: 0.25s ease;
+cursor: pointer;
+}
+
+.photo:hover {
+transform: translateY(-10px) scale(1.04);
+border-color: rgba(255, 255, 255, 0.22);
+box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+}
+
+.photo img {
+display: block;
+width: 100%;
+height: 150px;
+object-fit: cover;
+border-radius: 11px;
+transition: 0.25s ease;
+}
+
+.photo:hover img {
+filter: brightness(1.15);
+}
+
+.number {
+position: absolute;
+top: 15px;
+left: 15px;
+padding: 5px 9px;
+background: rgba(0, 0, 0, 0.75);
+border-radius: 8px;
+font-size: 12px;
+font-weight: bold;
+z-index: 2;
+}
+
+.coming-soon {
+text-align: center;
+margin: 30px auto 50px;
+padding: 30px 20px;
+}
+
+.coming-soon h2 {
+margin: 0 0 20px;
+font-size: 22px;
+letter-spacing: 2px;
+color: rgb(175, 175, 175);
+}
+
+.coming-card {
+width: 450px;
+max-width: 90%;
+margin: auto;
+padding: 30px;
+background: rgba(25, 25, 25, 0.7);
+border: 1px dashed rgba(255, 255, 255, 0.18);
+border-radius: 16px;
+transition: 0.25s ease;
+}
+
+.coming-card:hover {
+transform: translateY(-5px);
+background: rgba(35, 35, 35, 0.8);
+border-color: rgba(255, 255, 255, 0.3);
+box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.coming-card span {
+display: block;
+font-size: 45px;
+color: rgb(100, 100, 100);
+margin-bottom: 10px;
+transition: 0.25s ease;
+}
+
+.coming-card:hover span {
+color: rgb(170, 170, 170);
+transform: scale(1.15);
+}
+
+.coming-card p {
+margin: 0;
+color: rgb(130, 130, 130);
+font-size: 14px;
+}
+
+.footer {
+text-align: center;
+padding: 25px;
+color: rgba(255, 255, 255, 0.35);
+font-size: 13px;
+transition: 0.25s ease;
+}
+
+.footer:hover {
+color: rgba(255, 255, 255, 0.6);
+}
+
+.viewer {
+display: none;
+position: fixed;
+inset: 0;
+background: rgba(0, 0, 0, 0.94);
+justify-content: center;
+align-items: center;
+z-index: 9999;
+cursor: pointer;
+}
+
+.viewer img {
+max-width: 95vw;
+max-height: 95vh;
+object-fit: contain;
+border-radius: 8px;
+}
+
+.close {
+position: absolute;
+top: 20px;
+right: 30px;
+font-size: 40px;
+color: white;
+cursor: pointer;
+transition: 0.2s ease;
+}
+
+.close:hover {
+transform: scale(1.2);
+color: rgb(255, 120, 120);
+}
+
+.viewer-arrow {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+width: 60px;
+height: 80px;
+border: none;
+border-radius: 12px;
+background: rgba(40, 40, 40, 0.8);
+color: white;
+font-size: 50px;
+line-height: 1;
+cursor: pointer;
+transition: 0.2s ease;
+}
+
+.viewer-arrow:hover {
+background: rgba(90, 90, 90, 0.95);
+transform: translateY(-50%) scale(1.08);
+}
+
+.viewer-arrow.left {
+left: 25px;
+}
+
+.viewer-arrow.right {
+right: 25px;
+}
+
+@media (max-width: 900px) {
+.gallery {
+justify-content: flex-start;
+}
+
+h1 {
+font-size: 34px;
+}
+
+.stash-title h2 {
+font-size: 25px;
+}
+}
+
+body::before {
+content: "";
+position: fixed;
+width: 600px;
+height: 600px;
+left: var(--mouse-x, 50%);
+top: var(--mouse-y, 30%);
+transform: translate(-50%, -50%);
+background: radial-gradient(
+circle,
+rgba(100, 140, 255, 0.12) 0%,
+rgba(80, 100, 200, 0.06) 30%,
+transparent 70%
+);
+pointer-events: none;
+z-index: -1;
+transition: left 0.15s ease-out, top 0.15s ease-out;
+}
