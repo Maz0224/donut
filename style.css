@@ -697,3 +697,139 @@ padding: 10px;
 height: 115px;
 }
 }
+
+.contact-section {
+text-align: center;
+max-width: 700px;
+margin: 40px auto 70px;
+padding: 35px 25px;
+}
+
+.contact-section h2 {
+margin: 0 0 10px;
+font-size: 28px;
+letter-spacing: 3px;
+color: rgb(220, 220, 220);
+transition: 0.25s ease;
+}
+
+.contact-section h2:hover {
+color: white;
+transform: scale(1.04);
+text-shadow: 0 0 15px rgba(150, 170, 255, 0.25);
+}
+
+.contact-subtitle {
+margin: 0 auto 25px;
+color: rgb(150, 150, 150);
+font-size: 14px;
+}
+
+.contact-form {
+display: flex;
+flex-direction: column;
+gap: 14px;
+padding: 25px;
+
+background: rgba(20, 20, 20, 0.65);
+border: 1px solid rgba(255, 255, 255, 0.1);
+border-radius: 18px;
+
+box-shadow:
+0 10px 30px rgba(0, 0, 0, 0.4);
+
+transition: 0.25s ease;
+}
+
+.contact-form:hover {
+transform: translateY(-4px);
+
+border-color: rgba(255, 255, 255, 0.2);
+
+box-shadow:
+0 15px 35px rgba(0, 0, 0, 0.5),
+0 0 25px rgba(100, 150, 255, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+width: 100%;
+padding: 13px 15px;
+
+background: rgba(5, 10, 25, 0.8);
+
+border: 1px solid rgba(255, 255, 255, 0.12);
+border-radius: 10px;
+
+color: white;
+font-family: Arial, sans-serif;
+font-size: 14px;
+
+outline: none;
+
+transition: 0.2s ease;
+}
+
+.contact-form textarea {
+resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+color: rgb(110, 110, 110);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+border-color: rgba(120, 160, 255, 0.55);
+
+box-shadow:
+0 0 15px rgba(100, 140, 255, 0.12);
+}
+
+.contact-form button {
+padding: 13px;
+
+border: none;
+border-radius: 10px;
+
+background: linear-gradient(
+135deg,
+rgb(65, 95, 170),
+rgb(85, 65, 160)
+);
+
+color: white;
+
+font-size: 14px;
+font-weight: bold;
+letter-spacing: 1px;
+
+cursor: pointer;
+
+transition: 0.25s ease;
+}
+
+.contact-form button:hover {
+transform: translateY(-2px) scale(1.02);
+
+box-shadow:
+0 8px 20px rgba(0, 0, 0, 0.4),
+0 0 20px rgba(100, 140, 255, 0.2);
+}
+
+@media (max-width: 600px) {
+.contact-section {
+margin: 30px 10px 50px;
+padding: 25px 10px;
+}
+
+.contact-form {
+padding: 18px;
+}
+
+.contact-section h2 {
+font-size: 24px;
+}
+}
+
