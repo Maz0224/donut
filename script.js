@@ -9,67 +9,65 @@ stash1: [
 "7.png"
 ],
 
-```
 stash2: [
-    "stash2.1.png",
-    "stash2.2.png",
-    "stash2.3.png",
-    "stash2.4.png",
-    "stash2.5.png",
-    "stash2.6.png",
-    "stash2.7.png"
+"stash2.1.png",
+"stash2.2.png",
+"stash2.3.png",
+"stash2.4.png",
+"stash2.5.png",
+"stash2.6.png",
+"stash2.7.png"
 ]
-```
-
 };
 
-let currentStash = [];
+let currentStash = "stash1";
 let currentImage = 0;
 
-function openViewer(image, stash = "stash1") {
-currentStash = stashImages[stash];
-currentImage = currentStash.indexOf(image);
+function openViewer(image, stash) {
+if (!stashImages[stash]) {
+return;
+}
 
-```
-if (currentImage === -1) {
-    currentImage = 0;
+currentStash = stash;
+currentImage = stashImages[stash].indexOf(image);
+
+if (currentImage < 0) {
+currentImage = 0;
 }
 
 updateViewer();
 
 document.getElementById("viewer").style.display = "flex";
-```
-
 }
 
 function updateViewer() {
-document.getElementById("viewerImage").src = currentStash[currentImage];
+const images = stashImages[currentStash];
+
+document.getElementById("viewerImage").src = images[currentImage];
 }
 
 function nextImage() {
+const images = stashImages[currentStash];
+
 currentImage++;
 
-```
-if (currentImage >= currentStash.length) {
-    currentImage = 0;
+if (currentImage >= images.length) {
+currentImage = 0;
 }
 
 updateViewer();
-```
-
 }
 
 function previousImage() {
+const images = stashImages[currentStash];
+
 currentImage--;
 
-```
 if (currentImage < 0) {
-    currentImage = currentStash.length - 1;
+currentImage = images.length - 1;
 }
 
 updateViewer();
-```
-
 }
 
 function closeViewer() {
@@ -77,22 +75,21 @@ document.getElementById("viewer").style.display = "none";
 }
 
 document.addEventListener("keydown", function(event) {
-if (document.getElementById("viewer").style.display !== "flex") {
+const viewer = document.getElementById("viewer");
+
+if (viewer.style.display !== "flex") {
 return;
 }
 
-```
 if (event.key === "Escape") {
-    closeViewer();
+closeViewer();
 }
 
 if (event.key === "ArrowRight") {
-    nextImage();
+nextImage();
 }
 
 if (event.key === "ArrowLeft") {
-    previousImage();
+previousImage();
 }
-```
-
 });
