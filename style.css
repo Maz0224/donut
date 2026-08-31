@@ -846,3 +846,227 @@ text-align: center;
 text-align: center;
 }
 
+@media (max-width: 700px) {
+
+body {
+overflow-x: hidden;
+}
+
+.header {
+padding: 25px 12px 20px;
+}
+
+h1 {
+font-size: 28px;
+letter-spacing: 2px;
+}
+
+.subtitle {
+margin-top: 12px;
+padding: 7px 16px;
+font-size: 11px;
+}
+
+.stash-title {
+margin: 30px 12px 15px;
+}
+
+.stash-title h2 {
+font-size: 23px;
+line-height: 1.3;
+}
+
+.stash-title p {
+width: 100%;
+padding: 14px 16px;
+font-size: 13px;
+line-height: 1.5;
+}
+
+.disclaimer {
+max-width: 100%;
+padding: 9px 12px;
+font-size: 11px;
+}
+
+.gallery {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 12px;
+
+```
+width: 100%;
+padding: 12px;
+```
+
+}
+
+.photo {
+width: 100%;
+padding: 6px;
+border-radius: 13px;
+}
+
+.photo img {
+width: 100%;
+height: 125px;
+border-radius: 9px;
+}
+
+.photo:hover {
+transform: translateY(-5px) scale(1.02);
+}
+
+.number {
+top: 10px;
+left: 10px;
+padding: 4px 7px;
+font-size: 10px;
+}
+
+.coming-soon {
+margin: 20px auto 40px;
+padding: 25px 12px;
+}
+
+.coming-soon h2 {
+font-size: 19px;
+line-height: 1.4;
+}
+
+.coming-card {
+width: 100%;
+max-width: 400px;
+padding: 25px 15px;
+}
+
+.contact-section {
+width: 100%;
+margin: 30px auto 50px;
+padding: 25px 12px;
+}
+
+.contact-section h2 {
+font-size: 24px;
+}
+
+.contact-form {
+width: 100%;
+padding: 18px;
+gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+width: 100%;
+font-size: 14px;
+padding: 12px;
+}
+
+.contact-form button {
+width: 100%;
+padding: 13px;
+}
+
+.thank-you {
+min-height: calc(100vh - 150px);
+padding: 25px 12px;
+}
+
+.thank-card {
+width: 100%;
+padding: 35px 18px;
+}
+
+.thank-icon {
+width: 70px;
+height: 70px;
+margin: 0 auto 20px;
+font-size: 36px;
+}
+
+.thank-card h2 {
+font-size: 24px;
+letter-spacing: 2px;
+}
+
+.thank-card p {
+width: 100%;
+font-size: 14px;
+line-height: 1.5;
+}
+
+.back-button {
+max-width: 100%;
+padding: 12px 18px;
+font-size: 12px;
+}
+
+.viewer {
+padding: 15px;
+}
+
+.viewer img {
+max-width: 85vw;
+max-height: 80vh;
+}
+
+.viewer-arrow {
+width: 42px;
+height: 60px;
+font-size: 35px;
+border-radius: 10px;
+}
+
+.viewer-arrow.left {
+left: 8px;
+}
+
+.viewer-arrow.right {
+right: 8px;
+}
+
+.close {
+top: 10px;
+right: 15px;
+font-size: 32px;
+}
+}
+
+@media (max-width: 400px) {
+
+h1 {
+font-size: 24px;
+}
+
+.stash-title h2 {
+font-size: 21px;
+}
+
+.gallery {
+gap: 8px;
+padding: 8px;
+}
+
+.photo {
+padding: 5px;
+}
+
+.photo img {
+height: 105px;
+}
+
+.number {
+top: 8px;
+left: 8px;
+}
+
+.thank-card {
+padding: 30px 15px;
+}
+
+.thank-card h2 {
+font-size: 21px;
+}
+}
+
