@@ -1070,3 +1070,190 @@ font-size: 21px;
 }
 }
 
+/* NAV */
+
+.nav {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 12px;
+margin-top: 18px;
+}
+
+.nav a {
+display: inline-block;
+padding: 8px 20px;
+
+background: rgba(255, 255, 255, 0.06);
+border: 1px solid rgba(255, 255, 255, 0.14);
+border-radius: 20px;
+
+color: rgb(190, 190, 190);
+font-size: 13px;
+font-weight: bold;
+letter-spacing: 1px;
+text-decoration: none;
+
+transition: 0.25s ease;
+}
+
+.nav a:hover {
+transform: translateY(-2px);
+border-color: rgba(255, 255, 255, 0.3);
+color: white;
+
+box-shadow:
+0 6px 18px rgba(0, 0, 0, 0.4),
+0 0 15px rgba(150, 170, 255, 0.15);
+}
+
+.nav a.active {
+background: linear-gradient(
+135deg,
+rgb(65, 95, 170),
+rgb(85, 65, 160)
+);
+border-color: rgba(150, 170, 255, 0.5);
+color: white;
+
+box-shadow:
+0 6px 18px rgba(0, 0, 0, 0.4),
+0 0 20px rgba(100, 140, 255, 0.25);
+}
+
+/* SCHEMATICS PAGE */
+
+.schematics-intro {
+text-align: center;
+max-width: 700px;
+margin: 45px auto 10px;
+padding: 0 20px;
+
+color: rgb(190, 190, 190);
+font-size: 15px;
+line-height: 1.6;
+}
+
+.schematics-grid {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 22px;
+
+max-width: 1000px;
+margin: 35px auto 20px;
+padding: 0 20px;
+}
+
+.schematic-card {
+width: 300px;
+max-width: 100%;
+padding: 28px 24px;
+text-align: center;
+
+background: linear-gradient(
+145deg,
+rgb(35, 35, 35),
+rgb(18, 18, 18)
+);
+
+border: 1px solid rgba(255, 255, 255, 0.08);
+border-radius: 16px;
+
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+
+transition: 0.25s ease;
+}
+
+.schematic-card:hover {
+transform: translateY(-8px);
+border-color: rgba(255, 255, 255, 0.22);
+
+box-shadow:
+0 15px 35px rgba(0, 0, 0, 0.7),
+0 0 25px rgba(100, 150, 255, 0.15);
+}
+
+.schematic-card h3 {
+margin: 0 0 8px;
+font-size: 19px;
+color: rgb(225, 225, 225);
+}
+
+.schematic-version {
+display: inline-block;
+margin-bottom: 14px;
+padding: 3px 10px;
+
+background: rgba(255, 255, 255, 0.08);
+border-radius: 10px;
+
+color: rgb(150, 150, 150);
+font-size: 11px;
+font-weight: bold;
+letter-spacing: 1px;
+}
+
+.schematic-card p {
+margin: 0 0 22px;
+color: rgb(170, 170, 170);
+font-size: 13px;
+line-height: 1.5;
+}
+
+.download-button {
+display: inline-block;
+padding: 11px 24px;
+border-radius: 10px;
+
+background: linear-gradient(
+135deg,
+rgb(65, 95, 170),
+rgb(85, 65, 160)
+);
+
+color: white;
+font-size: 13px;
+font-weight: bold;
+letter-spacing: 1px;
+text-decoration: none;
+
+transition: 0.25s ease;
+}
+
+.download-button:hover {
+transform: translateY(-2px) scale(1.02);
+
+box-shadow:
+0 8px 20px rgba(0, 0, 0, 0.4),
+0 0 20px rgba(100, 140, 255, 0.2);
+}
+
+@media (max-width: 700px) {
+
+.nav {
+margin-top: 14px;
+gap: 8px;
+}
+
+.nav a {
+padding: 7px 15px;
+font-size: 11px;
+}
+
+.schematics-intro {
+margin: 30px auto 5px;
+font-size: 13px;
+}
+
+.schematics-grid {
+margin: 25px auto 10px;
+gap: 14px;
+}
+
+.schematic-card {
+width: 100%;
+max-width: 340px;
+padding: 22px 18px;
+}
+}
